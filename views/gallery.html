@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Eddy Kenzo</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html">🎵 Eddy Kenzo</a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+      <div class="container">
+        <h1>Photo Gallery</h1>
+        <p class="gallery-subtitle">
+          A visual journey through Eddy Kenzo's musical career
+        </p>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            All Photos
+          </button>
+          <button class="filter-btn" data-filter="performance">
+            Performances
+          </button>
+          <button class="filter-btn" data-filter="awards">Awards</button>
+          <button class="filter-btn" data-filter="studio">Studio</button>
+          <button class="filter-btn" data-filter="behind">
+            Behind the Scenes
+          </button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+          <div class="gallery-item performance">
+            <img src="../images/ed11.jpg" alt="Eddy Kenzo opening night" />
+            <div class="overlay">
+              <h3>Opening Night</h3>
+              <p>The energy at the very start of a landmark tour.</p>
+              <span class="date">2021</span>
+            </div>
+          </div>
+
+          <div class="gallery-item performance">
+            <img src="../images/ed1.jpeg" alt="Eddy Kenzo on stage" />
+            <div class="overlay">
+              <h3>Stage Energy</h3>
+              <p>A candid moment of performance fire and passion.</p>
+              <span class="date">2023</span>
+            </div>
+          </div>
+
+          <div class="gallery-item awards">
+            <img src="../images/ed22.jpeg" alt="Eddy Kenzo on the red carpet" />
+            <div class="overlay">
+              <h3>Red Carpet Moment</h3>
+              <p>Stepping out for a major industry event.</p>
+              <span class="date">2020</span>
+            </div>
+          </div>
+
+          <div class="gallery-item awards">
+            <img
+              src="../images/ed%20grammy1.jpg"
+              alt="Eddy Kenzo Grammy recognition"
+            />
+            <div class="overlay">
+              <h3>Grammy Recognition</h3>
+              <p>A proud milestone and celebration with peers.</p>
+              <span class="date">2022</span>
+            </div>
+          </div>
+
+          <div class="gallery-item studio">
+            <img src="../images/afcon.jpeg" alt="Festival performance" />
+            <div class="overlay">
+              <h3>Festival Performance</h3>
+              <p>Bringing the house down at an African music festival.</p>
+              <span class="date">2019</span>
+            </div>
+          </div>
+
+          <div class="gallery-item portrait">
+            <img src="../images/ke.jpeg" alt="Backstage portrait" />
+            <div class="overlay">
+              <h3>Backstage Portrait</h3>
+              <p>A quiet moment before the lights go up.</p>
+              <span class="date">2022</span>
+            </div>
+          </div>
+
+          <div class="gallery-item portrait">
+            <img src="../images/ken.jpeg" alt="Profile shot" />
+            <div class="overlay">
+              <h3>Profile Shot</h3>
+              <p>Portrait capturing the artist's signature look.</p>
+              <span class="date">2021</span>
+            </div>
+          </div>
+
+          <div class="gallery-item behind video-item">
+            <video
+              src="../images/vid1.mp4"
+              controls
+              poster="../images/ed22.jpeg"
+            ></video>
+            <div class="overlay">
+              <h3>Live Clip</h3>
+              <p>Short video clip from a recent live set.</p>
+              <span class="date">2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+          <span class="close-lightbox">&times;</span>
+          <img class="lightbox-content" id="lightbox-img" />
+          <div id="lightbox-caption"></div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more">
+          <button class="btn btn-secondary">Load More Photos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2026 Musician Eddy Kenzo. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
