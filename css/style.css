@@ -155,11 +155,61 @@ body {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  min-height: 250px;
+  position: relative;
 }
 
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.album-card {
+  background-image:
+    linear-gradient(rgba(15, 22, 38, 0.55), rgba(15, 22, 38, 0.7)),
+    url("../images/ed1.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.event-card {
+  background-image:
+    linear-gradient(rgba(15, 22, 38, 0.5), rgba(15, 22, 38, 0.75)),
+    url("../images/ed22.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.mini-links {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.mini-links span {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.7rem;
 }
 
 .card img {
@@ -175,6 +225,15 @@ body {
 .card p {
   padding: 0 1rem 1rem;
   color: #666;
+}
+
+.album-card h3,
+.album-card p,
+.event-card h3,
+.event-card p {
+  padding: 0;
+  margin: 0;
+  color: #fff;
 }
 
 /* Footer */
