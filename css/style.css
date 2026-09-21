@@ -1156,3 +1156,141 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* Career Timeline */
+.career-timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+.career-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #f7b32b;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -0.05rem;
+  top: 0.3rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #003300;
+  border: 3px solid #f7b32b;
+}
+
+.timeline-year {
+  display: inline-block;
+  font-weight: bold;
+  color: #f7b32b;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.5rem;
+  color: #003300;
+}
+
+.timeline-content p {
+  margin: 0;
+  line-height: 1.6;
+}
+/* Discography */
+.discography-section {
+  margin-bottom: 2rem;
+}
+
+.discography-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.album-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.2rem;
+  border-left: 4px solid #f7b32b;
+  background: #f8f8f8;
+  border-radius: 6px;
+}
+
+.album-year {
+  font-weight: bold;
+  color: #f7b32b;
+  min-width: 55px;
+}
+
+.album-info h3 {
+  margin: 0 0 0.4rem;
+  color: #003300;
+}
+
+.album-info p {
+  margin: 0;
+  line-height: 1.5;
+}
+/* Awards Page */
+.awards-section {
+  padding: 4rem 0;
+}
+
+.awards-section h1 {
+  text-align: center;
+  color: #003300;
+  margin-bottom: 1rem;
+}
+
+.awards-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.award-card {
+  padding: 1.5rem;
+  border-top: 4px solid #f7b32b;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.award-year {
+  font-weight: bold;
+  color: #f7b32b;
+  margin-bottom: 0.5rem;
+}
+
+.award-card h2 {
+  color: #003300;
+  margin: 0 0 0.7rem;
+}
+
+.award-card p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+}
