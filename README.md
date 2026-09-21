@@ -16,21 +16,12 @@ This website includes a homepage, information about the musician, a gallery, a m
 
 ## Main Features
 
-- Clear navigation between pages
 - Biography and artist information
 - Gallery for images and media
 - Music-related content and presentation
 - Contact section for inquiries
-- Responsive layout for smaller screens
+- Can be used on both the computer and mobile devices
 
 ## Project Notes
 
 The site was built using HTML, CSS, and JavaScript, with a simple structure that keeps the content easy to edit and update. The design focuses on readability, visual balance, and making the musician's work the main focus.
-
-## Files
-
-- `views/` — pages for the website
-- `images/` — media used throughout the site
-- `assets/` — extra files and resources
-- `js/script.js` — interactive elements
-- `LICENSE` — project license
