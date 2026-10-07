@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,7 +10,34 @@
     />
     <title>Music | Eddy Kenzo</title>
     <link rel="stylesheet" href="../css/style.css" />
+
+    ```
+    <style>
+      /* Clickable song styling - keeps the existing site colors */
+      .song-link,
+      .timeline-song-link {
+        color: inherit;
+        text-decoration: none;
+        font-weight: inherit;
+        transition: color 0.3s ease;
+      }
+
+      .song-link:hover,
+      .song-link:focus,
+      .timeline-song-link:hover,
+      .timeline-song-link:focus {
+        color: #e94560;
+        text-decoration: underline;
+      }
+
+      .timeline-song-link {
+        color: #e94560;
+        font-weight: 600;
+      }
+    </style>
+    ```
   </head>
+
   <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -17,6 +45,8 @@
         <div class="logo">
           <a href="index.html">🎵 Eddy Kenzo</a>
         </div>
+
+        ```
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -25,6 +55,7 @@
           <li><a href="awards.html">Awards</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+
         <button
           class="hamburger"
           aria-label="Toggle navigation"
@@ -47,6 +78,7 @@
             <!-- Discography -->
             <div class="music-section discography-section">
               <h2>Discography</h2>
+
               <div class="discography-list">
                 <div class="album-item">
                   <span class="album-year">2014</span>
@@ -97,32 +129,92 @@
             <!-- Highlights -->
             <div class="music-section">
               <h2>Highlights</h2>
+
               <div class="music-songs">
                 <div class="song-item">
-                  <span>Sitya Loss</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Sitya+Loss"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Sitya Loss
+                    </a>
+                  </span>
                   <p>
                     Released in 2014 — Eddy Kenzo's international breakthrough
                     hit.
                   </p>
                 </div>
+
                 <div class="song-item">
-                  <span>Mbilo Mbilo</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Mbilo+Mbilo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Mbilo Mbilo
+                    </a>
+                  </span>
                   <p>One of his most loved songs across East Africa.</p>
                 </div>
+
                 <div class="song-item">
-                  <span>Weekend</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Weekend"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Weekend
+                    </a>
+                  </span>
                   <p>A chart-topping Afrobeat anthem loved by fans.</p>
                 </div>
+
                 <div class="song-item">
-                  <span>Tweyagale</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Tweyagale"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Tweyagale
+                    </a>
+                  </span>
                   <p>A romantic hit showcasing Eddy Kenzo's versatility.</p>
                 </div>
+
                 <div class="song-item">
-                  <span>Viva Africa</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Viva+Africa"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Viva Africa
+                    </a>
+                  </span>
                   <p>A song celebrating African unity and culture.</p>
                 </div>
+
                 <div class="song-item">
-                  <span>Pull Up</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Pull+Up"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Pull Up
+                    </a>
+                  </span>
                   <p>An energetic Afrobeat hit with an infectious rhythm.</p>
                 </div>
               </div>
@@ -131,43 +223,123 @@
             <!-- All Songs -->
             <div class="music-section">
               <h2>All Songs</h2>
+
               <div class="music-songs">
                 <div class="song-item">
-                  <span>Sirimba</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Sirimba"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Sirimba
+                    </a>
+                  </span>
                   <p>Featuring Bisa Kdei.</p>
                 </div>
+
                 <div class="song-item">
-                  <span>Malembe</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Malembe"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Malembe
+                    </a>
+                  </span>
                   <p>Featuring Werrason.</p>
                 </div>
+
                 <div class="song-item">
-                  <span>Bolingo</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Bolingo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Bolingo
+                    </a>
+                  </span>
                   <p>A smooth Afro-pop love song.</p>
                 </div>
+
                 <div class="song-item">
-                  <span>Bibawo</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Bibawo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Bibawo
+                    </a>
+                  </span>
                   <p>An inspirational song loved by many fans.</p>
                 </div>
+
                 <div class="song-item">
-                  <span>Nyoola</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Nyoola"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Nyoola
+                    </a>
+                  </span>
                   <p>An uplifting track showcasing his unique style.</p>
                 </div>
+
                 <div class="song-item">
-                  <span>Katonda Yambye</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Katonda+Yambye"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Katonda Yambye
+                    </a>
+                  </span>
                   <p>A gospel-inspired song expressing gratitude.</p>
                 </div>
+
                 <div class="song-item">
-                  <span>Zigido</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Zigido"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Zigido
+                    </a>
+                  </span>
                   <p>A vibrant Afrobeat song with energetic dance vibes.</p>
                 </div>
+
                 <div class="song-item">
-                  <span>Nkulowozaako</span>
+                  <span>
+                    <a
+                      class="song-link"
+                      href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Nkulowozaako"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Nkulowozaako
+                    </a>
+                  </span>
                   <p>A heartfelt love song appreciated by many listeners.</p>
                 </div>
               </div>
             </div>
 
-            <!-- Career Timeline (moved from About) -->
+            <!-- Career Timeline -->
             <div class="music-section">
               <h2>Career Timeline</h2>
 
@@ -178,7 +350,16 @@
                     <h3>Beginning of Music Career</h3>
                     <p>
                       Eddy Kenzo began his professional music journey and
-                      released his first song, "Yannimba," with Mikie Wine.
+                      released his first song,
+                      <a
+                        class="timeline-song-link"
+                        href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Yannimba"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        "Yannimba"
+                      </a>
+                      with Mikie Wine.
                     </p>
                   </div>
                 </div>
@@ -188,8 +369,17 @@
                   <div class="timeline-content">
                     <h3>Stamina Breakthrough</h3>
                     <p>
-                      His song "Stamina" became a major hit and helped establish
-                      him as one of Uganda's emerging music artists.
+                      His song
+                      <a
+                        class="timeline-song-link"
+                        href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Stamina"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        "Stamina"
+                      </a>
+                      became a major hit and helped establish him as one of
+                      Uganda's emerging music artists.
                     </p>
                   </div>
                 </div>
@@ -199,9 +389,16 @@
                   <div class="timeline-content">
                     <h3>Sitya Loss</h3>
                     <p>
-                      "Sitya Loss" became an international success, with its
-                      music video featuring the Ghetto Kids gaining worldwide
-                      attention.
+                      <a
+                        class="timeline-song-link"
+                        href="https://www.youtube.com/results?search_query=Eddy+Kenzo+Sitya+Loss"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        "Sitya Loss"
+                      </a>
+                      became an international success, with its music video
+                      featuring the Ghetto Kids gaining worldwide attention.
                     </p>
                   </div>
                 </div>
@@ -249,29 +446,36 @@
     <footer>
       <div class="footer-content">
         <p>&copy; 2026 Musician Eddy Kenzo. All rights reserved.</p>
+
         <div class="social-links">
           <a
             href="https://x.com/eddykenzo"
             target="_blank"
             rel="noopener noreferrer"
-            >Twitter</a
           >
+            Twitter
+          </a>
+
           <a
             href="https://www.instagram.com/eddykenzo/"
             target="_blank"
             rel="noopener noreferrer"
-            >Instagram</a
           >
+            Instagram
+          </a>
+
           <a
             href="https://www.youtube.com/results?search_query=Eddy+Kenzo"
             target="_blank"
             rel="noopener noreferrer"
-            >YouTube</a
           >
+            YouTube
+          </a>
         </div>
       </div>
     </footer>
 
     <script src="../js/script.js"></script>
+    ```
   </body>
 </html>
