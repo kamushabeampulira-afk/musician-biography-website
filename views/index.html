@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Musician Biography</title>
+    <meta
+      name="description"
+      content="Explore the life, music, and achievements of Ugandan musician Eddy Kenzo."
+    />
+    <title>Eddy Kenzo | Musician Biography</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
@@ -21,67 +25,66 @@
           <li><a href="awards.html">Awards</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
+        <button
+          class="hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </div>
+        </button>
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
       <div class="hero-content">
         <h1>Welcome to the World of</h1>
         <h2>Eddy Kenzo</h2>
         <p>A journey through rhythm and soul</p>
-        <a href="about.html" class="btn btn-primary">Learn More</a>
+        <a href="about.html" class="btn">Learn More</a>
       </div>
     </section>
 
-    <!-- Featured Content -->
+    <!-- Featured -->
     <section class="featured">
       <h2>Featured</h2>
       <div class="grid-container">
         <div class="card album-card">
-          <a
-            href="https://www.instagram.com/eddykenzo/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="card-link"
-          >
+          <a href="music.html" class="card-link">
             <div class="card-content">
-              <h3>Latest Album</h3>
-              <p>Listen to his newest song</p>
+              <h3>Latest Music</h3>
+              <p>Explore his discography and biggest hits</p>
               <div class="mini-links">
-                <span>Instagram</span>
-                <span>Twitter</span>
-                <span>YouTube</span>
+                <span>Discography</span>
+                <span>Highlights</span>
+                <span>All Songs</span>
               </div>
             </div>
           </a>
         </div>
+
         <div class="card event-card">
-          <a
-            href="https://x.com/eddykenzo"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="card-link"
-          >
+          <a href="awards.html" class="card-link">
             <div class="card-content">
-              <h3>Upcoming Events</h3>
-              <p>Tour dates and locations</p>
+              <h3>Awards &amp; Achievements</h3>
+              <p>From BET to the Grammy nomination</p>
               <div class="mini-links">
-                <span>YouTube</span>
-                <span>Twitter</span>
+                <span>BET</span>
+                <span>Nickelodeon</span>
+                <span>Grammy</span>
               </div>
             </div>
           </a>
         </div>
+
         <div class="card">
-          <img src="../images/afcon.jpeg" alt="Eddy Kenzo gallery moment" />
-          <h3>Gallery</h3>
-          <p>Behind the scenes photos</p>
+          <a href="gallery.html" class="card-link">
+            <img src="../images/afcon.jpeg" alt="Eddy Kenzo performing live" />
+            <h3>Gallery</h3>
+            <p>Performances, awards, and behind the scenes</p>
+          </a>
         </div>
       </div>
     </section>

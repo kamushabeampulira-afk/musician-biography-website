@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery - Eddy Kenzo</title>
+    <meta
+      name="description"
+      content="Photo gallery of Eddy Kenzo's performances, awards, and behind-the-scenes moments."
+    />
+    <title>Gallery | Eddy Kenzo</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
@@ -21,15 +25,19 @@
           <li><a href="awards.html">Awards</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
+        <button
+          class="hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </div>
+        </button>
       </div>
     </nav>
 
-    <!-- Gallery Section -->
+    <!-- Gallery -->
     <section class="gallery-section">
       <div class="container">
         <h1>Photo Gallery</h1>
@@ -37,26 +45,44 @@
           A visual journey through Eddy Kenzo's musical career
         </p>
 
-        <!-- Filter Buttons -->
+        <!-- Filter buttons -->
         <div class="filter-buttons">
-          <button class="filter-btn active" data-filter="all">
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            aria-pressed="true"
+          >
             All Photos
           </button>
-          <button class="filter-btn" data-filter="performance">
+          <button
+            class="filter-btn"
+            data-filter="performance"
+            aria-pressed="false"
+          >
             Performances
           </button>
-          <button class="filter-btn" data-filter="awards">Awards</button>
-          <button class="filter-btn" data-filter="studio">Studio</button>
-          <button class="filter-btn" data-filter="portrait">Portraits</button>
-          <button class="filter-btn" data-filter="behind">
+          <button class="filter-btn" data-filter="awards" aria-pressed="false">
+            Awards
+          </button>
+          <button class="filter-btn" data-filter="studio" aria-pressed="false">
+            Studio
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="portrait"
+            aria-pressed="false"
+          >
+            Portraits
+          </button>
+          <button class="filter-btn" data-filter="behind" aria-pressed="false">
             Behind the Scenes
           </button>
         </div>
 
-        <!-- Gallery Grid -->
+        <!-- Grid -->
         <div class="gallery-grid">
           <div class="gallery-item performance">
-            <img src="../images/ed11.jpg" alt="Eddy Kenzo opening night" />
+            <img src="../images/ed11.jpeg" alt="Eddy Kenzo opening night" />
             <div class="overlay">
               <h3>Opening Night</h3>
               <p>The energy at the very start of a landmark tour.</p>
@@ -126,6 +152,7 @@
               src="../images/vid1.mp4"
               controls
               poster="../images/ed22.jpeg"
+              preload="metadata"
             ></video>
             <div class="overlay">
               <h3>Live Clip</h3>
@@ -135,16 +162,22 @@
           </div>
         </div>
 
-        <!-- Lightbox Modal -->
-        <div id="lightbox" class="lightbox">
-          <span class="close-lightbox">&times;</span>
-          <img class="lightbox-content" id="lightbox-img" />
+        <!-- Lightbox -->
+        <div
+          id="lightbox"
+          class="lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image preview"
+        >
+          <span class="close-lightbox" aria-label="Close">&times;</span>
+          <img class="lightbox-content" id="lightbox-img" alt="" />
           <div id="lightbox-caption"></div>
         </div>
 
-        <!-- Load More Button -->
+        <!-- Load More -->
         <div class="load-more">
-          <button class="btn btn-secondary">Load More Photos</button>
+          <button class="btn-secondary">Load More Photos</button>
         </div>
       </div>
     </section>
@@ -154,9 +187,24 @@
       <div class="footer-content">
         <p>&copy; 2026 Musician Eddy Kenzo. All rights reserved.</p>
         <div class="social-links">
-          <a href="#">Twitter</a>
-          <a href="#">Instagram</a>
-          <a href="#">YouTube</a>
+          <a
+            href="https://x.com/eddykenzo"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Twitter</a
+          >
+          <a
+            href="https://www.instagram.com/eddykenzo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+          <a
+            href="https://www.youtube.com/results?search_query=Eddy+Kenzo"
+            target="_blank"
+            rel="noopener noreferrer"
+            >YouTube</a
+          >
         </div>
       </div>
     </footer>

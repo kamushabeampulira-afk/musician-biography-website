@@ -1,4 +1,6 @@
-/* Reset and Base Styles */
+/* =========================================================
+   RESET & BASE
+   ========================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +11,17 @@ body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
   color: #333;
+  background: #fff;
 }
 
-/* Navigation */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 .navbar {
   background: #1a1a2e;
   padding: 1rem 0;
@@ -49,18 +59,22 @@ body {
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease;
+  border-radius: 4px;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
   background: #e94560;
-  border-radius: 4px;
 }
 
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .bar {
@@ -69,9 +83,100 @@ body {
   background: #fff;
   margin: 3px 0;
   transition: 0.3s;
+  border-radius: 2px;
 }
 
-/* Hero Section */
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 64px;
+    left: -100%;
+    flex-direction: column;
+    background: #1a1a2e;
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0;
+    gap: 0.5rem;
+    transition: left 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 1rem;
+  }
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #e94560;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #c81e3f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+}
+
+.btn-secondary {
+  padding: 1rem 3rem;
+  background: transparent;
+  color: #1a1a2e;
+  border: 2px solid #1a1a2e;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #1a1a2e;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(26, 26, 46, 0.3);
+}
+
+/* =========================================================
+   HERO (Home page)
+   ========================================================= */
 .hero {
   height: 100vh;
   min-height: 700px;
@@ -92,7 +197,7 @@ body {
   justify-content: center;
   text-align: center;
   color: #fff;
-  padding-top: 60px;
+  padding: 60px 1rem 0;
 }
 
 .hero-content h1 {
@@ -112,24 +217,9 @@ body {
   opacity: 0.9;
 }
 
-.btn {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  background: #e94560;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: #c81e3f;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
-}
-
-/* Featured Section */
+/* =========================================================
+   FEATURED (Home page cards)
+   ========================================================= */
 .featured {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -197,6 +287,15 @@ body {
   color: #fff;
 }
 
+.album-card h3,
+.album-card p,
+.event-card h3,
+.event-card p {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
 .mini-links {
   display: flex;
   gap: 0.6rem;
@@ -218,25 +317,19 @@ body {
   object-fit: cover;
 }
 
-.card h3 {
+.card > h3 {
   padding: 1rem 1rem 0.5rem;
+  color: #1a1a2e;
 }
 
-.card p {
+.card > p {
   padding: 0 1rem 1rem;
   color: #666;
 }
 
-.album-card h3,
-.album-card p,
-.event-card h3,
-.event-card p {
-  padding: 0;
-  margin: 0;
-  color: #fff;
-}
-
-/* Footer */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 footer {
   background: #1a1a2e;
   color: #fff;
@@ -249,6 +342,12 @@ footer {
   margin: 0 auto;
   text-align: center;
   padding: 0 2rem;
+}
+
+.footer-content p + p {
+  margin-top: 0.5rem;
+  opacity: 0.8;
+  font-size: 0.9rem;
 }
 
 .social-links {
@@ -267,96 +366,11 @@ footer {
   opacity: 1;
 }
 
-/* Music Page Styles */
-.music-hero {
-  min-height: 70vh;
-}
-
-.music-hero .hero-content {
-  max-width: 700px;
-}
-
-/* Contact Page Styles */
-.music-page-section {
-  padding: 4rem 2rem;
-  background: #f8f9fa;
-}
-
-.music-page {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.music-main {
-  background: #fff;
-  border-radius: 20px;
-  padding: 2.5rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-}
-
-.music-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.music-section {
-  background: #fff;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-.music-section h2 {
-  color: #1a1a2e;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.8rem;
-  border-bottom: 3px solid #e94560;
-}
-
-.music-songs {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.song-item {
-  background: #f8f9fa;
-  border-left: 4px solid #e94560;
-  padding: 1rem;
-  border-radius: 8px;
-  transition: 0.3s ease;
-}
-
-.song-item:hover {
-  transform: translateX(8px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
-}
-
-.song-item span {
-  display: block;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #1a1a2e;
-  margin-bottom: 0.4rem;
-}
-
-.song-item p {
-  color: #666;
-  font-size: 0.9rem;
-}
-
-/* Responsive */
-
-@media (max-width: 900px) {
-  .music-columns {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* About Page Styles */
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
 .about-section {
-  padding: 80px 2rem 4rem;
+  padding: 90px 2rem 4rem;
   background: #f8f9fa;
   min-height: 100vh;
 }
@@ -443,7 +457,7 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
-/* Bio Image Sidebar */
+/* Bio sidebar */
 .bio-image {
   position: sticky;
   top: 100px;
@@ -453,7 +467,6 @@ footer {
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-  display: block;
 }
 
 .image-caption {
@@ -502,7 +515,6 @@ footer {
   min-width: 100px;
 }
 
-/* Responsive Design for About Page */
 @media (max-width: 968px) {
   .bio-content {
     grid-template-columns: 1fr;
@@ -522,7 +534,7 @@ footer {
 
 @media (max-width: 768px) {
   .about-section {
-    padding: 70px 1rem 2rem;
+    padding: 80px 1rem 2rem;
   }
 
   .about-section h1 {
@@ -533,19 +545,229 @@ footer {
     font-size: 1.4rem;
   }
 
-  .bio-text p {
-    font-size: 1rem;
-  }
-
   .bio-text blockquote {
     font-size: 1rem;
     padding: 1rem 1.5rem;
   }
 }
 
-/* Gallery Page Styles */
+/* =========================================================
+   MUSIC PAGE
+   ========================================================= */
+.music-page-section {
+  padding: 90px 2rem 4rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #eef2ff 100%);
+  min-height: 100vh;
+}
+
+.music-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.music-page h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #1a1a2e;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.music-page h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #e94560;
+  border-radius: 2px;
+}
+
+.music-main {
+  background: linear-gradient(135deg, #ffffff 0%, #f7f9ff 100%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 12px 30px rgba(26, 26, 46, 0.12);
+  border: 1px solid rgba(233, 69, 96, 0.12);
+}
+
+.music-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.music-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.music-section h2 {
+  color: #1a1a2e;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid #e94560;
+}
+
+.music-songs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.song-item {
+  background: #f8f9fa;
+  border-left: 4px solid #e94560;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.song-item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.song-item span {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-bottom: 0.4rem;
+}
+
+.song-item p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Career Timeline */
+.career-timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+.career-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #e94560;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -0.05rem;
+  top: 0.3rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #1a1a2e;
+  border: 3px solid #e94560;
+}
+
+.timeline-year {
+  display: inline-block;
+  font-weight: bold;
+  color: #e94560;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.5rem;
+  color: #1a1a2e;
+}
+
+.timeline-content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Discography */
+.discography-section {
+  margin-bottom: 2rem;
+}
+
+.discography-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.album-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.2rem;
+  border-left: 4px solid #e94560;
+  background: #f8f8f8;
+  border-radius: 6px;
+}
+
+.album-year {
+  font-weight: bold;
+  color: #e94560;
+  min-width: 55px;
+}
+
+.album-info h3 {
+  margin: 0 0 0.4rem;
+  color: #1a1a2e;
+}
+
+.album-info p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .music-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .music-main {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .music-page-section {
+    padding: 80px 1rem 2rem;
+  }
+
+  .music-page h1 {
+    font-size: 2rem;
+  }
+
+  .music-section {
+    padding: 1.5rem;
+  }
+
+  .album-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* =========================================================
+   GALLERY PAGE
+   ========================================================= */
 .gallery-section {
-  padding: 80px 2rem 4rem;
+  padding: 90px 2rem 4rem;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   min-height: 100vh;
 }
@@ -578,7 +800,7 @@ footer {
   padding-top: 1rem;
 }
 
-/* Filter Buttons */
+/* Filter buttons */
 .filter-buttons {
   display: flex;
   justify-content: center;
@@ -612,7 +834,7 @@ footer {
   box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
 }
 
-/* Gallery Grid */
+/* Grid */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -628,6 +850,7 @@ footer {
   cursor: pointer;
   aspect-ratio: 4/3;
   transition: all 0.3s ease;
+  background: #000;
 }
 
 .gallery-item:hover {
@@ -635,17 +858,21 @@ footer {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-.gallery-item img {
+.gallery-item img,
+.gallery-item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
+  transition: transform 0.3s ease;
 }
-.gallery-item:hover img {
+
+.gallery-item:hover img,
+.gallery-item:hover video {
   transform: scale(1.05);
 }
 
-/* Image Overlay */
+/* Overlay */
 .gallery-item .overlay {
   position: absolute;
   bottom: 0;
@@ -683,7 +910,11 @@ footer {
   font-style: italic;
 }
 
-/* Lightbox Modal */
+.gallery-item.hidden {
+  display: none;
+}
+
+/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
@@ -752,40 +983,15 @@ footer {
   transform: rotate(90deg);
 }
 
-/* Load More Button */
+/* Load more */
 .load-more {
   text-align: center;
   margin-top: 1rem;
 }
 
-.btn-secondary {
-  padding: 1rem 3rem;
-  background: transparent;
-  color: #1a1a2e;
-  border: 2px solid #1a1a2e;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background: #1a1a2e;
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(26, 26, 46, 0.3);
-}
-
-/* Hidden class for filtering */
-.gallery-item.hidden {
-  display: none;
-}
-
-/* Responsive Design for Gallery */
 @media (max-width: 768px) {
   .gallery-section {
-    padding: 70px 1rem 2rem;
+    padding: 80px 1rem 2rem;
   }
 
   .gallery-section h1 {
@@ -795,10 +1001,6 @@ footer {
   .gallery-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
-  }
-
-  .filter-buttons {
-    gap: 0.5rem;
   }
 
   .filter-btn {
@@ -828,7 +1030,6 @@ footer {
   .gallery-item .overlay h3 {
     font-size: 1rem;
   }
-
   .gallery-item .overlay p {
     font-size: 0.8rem;
   }
@@ -852,26 +1053,106 @@ footer {
   }
 }
 
-.music-hero {
-  height: 60vh;
+/* =========================================================
+   AWARDS PAGE
+   ========================================================= */
+.awards-section {
+  padding: 90px 2rem 4rem;
+  background: #f8f9fa;
+  min-height: 100vh;
 }
 
-.card-content {
-  padding: 1.5rem;
-}
-
-.card-content h3 {
+.awards-section h1 {
+  text-align: center;
   color: #1a1a2e;
-  margin-bottom: 0.8rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
 }
 
-.card-content p {
+.awards-section h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #e94560;
+  border-radius: 2px;
+}
+
+.awards-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 2rem auto 2.5rem;
+  line-height: 1.6;
   color: #555;
-  line-height: 1.7;
 }
 
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.award-card {
+  padding: 1.75rem;
+  border-top: 4px solid #e94560;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.award-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.award-year {
+  font-weight: bold;
+  color: #e94560;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+.award-card h2 {
+  color: #1a1a2e;
+  margin: 0 0 0.7rem;
+  font-size: 1.3rem;
+}
+
+.award-card p {
+  line-height: 1.6;
+  margin: 0;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .awards-section {
+    padding: 80px 1rem 2rem;
+  }
+
+  .awards-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
 .contact-section {
-  padding: 100px 2rem 4rem;
+  padding: 90px 2rem 4rem;
   background: #f8f9fa;
   min-height: 100vh;
 }
@@ -881,13 +1162,26 @@ footer {
   color: #1a1a2e;
   font-size: 3rem;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.contact-section h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #e94560;
+  border-radius: 2px;
 }
 
 .contact-subtitle {
   text-align: center;
   color: #666;
   max-width: 700px;
-  margin: 0 auto 3rem;
+  margin: 2rem auto 3rem;
   font-size: 1.1rem;
 }
 
@@ -895,11 +1189,13 @@ footer {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .contact-form,
 .contact-info {
-  background: white;
+  background: #fff;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -909,6 +1205,8 @@ footer {
 .contact-info h2 {
   color: #1a1a2e;
   margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #e94560;
 }
 
 .contact-form label {
@@ -916,6 +1214,7 @@ footer {
   margin-top: 1rem;
   margin-bottom: 0.4rem;
   font-weight: bold;
+  color: #1a1a2e;
 }
 
 .contact-form input,
@@ -926,6 +1225,15 @@ footer {
   border-radius: 6px;
   font-size: 1rem;
   margin-bottom: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #e94560;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.15);
 }
 
 .contact-form textarea {
@@ -939,6 +1247,7 @@ footer {
 .info-card h3 {
   color: #e94560;
   margin-bottom: 0.5rem;
+  font-size: 1.05rem;
 }
 
 .info-card ul {
@@ -950,347 +1259,16 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .contact-content {
-    grid-template-columns: 1fr;
+  .contact-section {
+    padding: 80px 1rem 2rem;
   }
 
   .contact-section h1 {
     font-size: 2.2rem;
   }
-}
 
-.music-page-section {
-  padding: 7rem 2rem 4rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #eef2ff 100%);
-  min-height: 100vh;
-}
-
-.music-page {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.music-main {
-  background: linear-gradient(135deg, #ffffff 0%, #f7f9ff 100%);
-  border-radius: 20px;
-  padding: 2.5rem;
-  box-shadow: 0 12px 30px rgba(26, 26, 46, 0.12);
-  border: 1px solid rgba(233, 69, 96, 0.12);
-}
-
-.music-intro {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.music-intro h2 {
-  color: #1a1a2e;
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
-}
-
-.music-intro p {
-  color: #666;
-  font-size: 1rem;
-}
-
-.music-tabs {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-
-.tab {
-  border: none;
-  border-radius: 999px;
-  background: #b9bbc8;
-  color: #11131f;
-  font-weight: 700;
-  padding: 0.95rem 1.8rem;
-  cursor: pointer;
-  transition:
-    background 0.3s ease,
-    transform 0.2s ease;
-}
-
-.tab:hover {
-  background: #989cae;
-  transform: translateY(-1px);
-}
-
-.tab.active {
-  background: #1a1a2e;
-  color: #fff;
-}
-
-.music-columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
-  align-items: start;
-}
-
-.music-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
-  border-radius: 18px;
-  padding: 1.5rem;
-  border: 1px solid #e8ebf5;
-  box-shadow: 0 10px 28px rgba(17, 19, 31, 0.08);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-/* Ensure cards are equal height and content flows naturally */
-.music-columns > .music-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 320px;
-}
-
-.music-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 34px rgba(17, 19, 31, 0.14);
-}
-
-.alt-card {
-  background: linear-gradient(135deg, #fff9fb 0%, #ffffff 100%);
-}
-
-.music-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.72rem;
-  color: #e94560;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-}
-
-.music-card h3 {
-  color: #1a1a2e;
-  font-size: 1.3rem;
-}
-
-.pill {
-  background: #1a1a2e;
-  color: #fff;
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.music-songs {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-
-.song-item {
-  display: block;
-  width: 100%;
-  text-align: left;
-  background: #fff;
-  border: 1px solid #f0f2f8;
-  border-left: 4px solid #e94560;
-  padding: 1rem 1.25rem;
-  border-radius: 12px;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
-  cursor: pointer;
-}
-
-.song-item:hover {
-  transform: translateX(6px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-  background: #fff8fa;
-}
-
-.song-item span {
-  display: block;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #1a1a2e;
-  margin-bottom: 0.35rem;
-}
-
-.song-item p {
-  color: #666;
-  font-size: 0.9rem;
-  line-height: 1.45;
-}
-
-/* Accessibility: focus state for keyboard users */
-.song-item:focus {
-  outline: 3px solid rgba(233, 69, 96, 0.25);
-  outline-offset: 2px;
-}
-
-/* Small screens: stack cards and ensure padding */
-@media (max-width: 900px) {
-  .music-columns {
+  .contact-content {
     grid-template-columns: 1fr;
-  }
-
-  .music-card {
-    padding: 1rem;
-  }
-}
-
-/* Responsive */
-
-@media (max-width: 900px) {
-  .music-columns {
-    grid-template-columns: 1fr;
-  }
-}
-/* Career Timeline */
-.career-timeline {
-  position: relative;
-  margin: 2rem 0;
-  padding-left: 2rem;
-}
-
-.career-timeline::before {
-  content: "";
-  position: absolute;
-  left: 0.5rem;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: #f7b32b;
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 2rem;
-  padding-left: 2rem;
-}
-
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -0.05rem;
-  top: 0.3rem;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #003300;
-  border: 3px solid #f7b32b;
-}
-
-.timeline-year {
-  display: inline-block;
-  font-weight: bold;
-  color: #f7b32b;
-  margin-bottom: 0.4rem;
-}
-
-.timeline-content h3 {
-  margin: 0 0 0.5rem;
-  color: #003300;
-}
-
-.timeline-content p {
-  margin: 0;
-  line-height: 1.6;
-}
-/* Discography */
-.discography-section {
-  margin-bottom: 2rem;
-}
-
-.discography-list {
-  display: grid;
-  gap: 1rem;
-}
-
-.album-item {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-  padding: 1.2rem;
-  border-left: 4px solid #f7b32b;
-  background: #f8f8f8;
-  border-radius: 6px;
-}
-
-.album-year {
-  font-weight: bold;
-  color: #f7b32b;
-  min-width: 55px;
-}
-
-.album-info h3 {
-  margin: 0 0 0.4rem;
-  color: #003300;
-}
-
-.album-info p {
-  margin: 0;
-  line-height: 1.5;
-}
-/* Awards Page */
-.awards-section {
-  padding: 4rem 0;
-}
-
-.awards-section h1 {
-  text-align: center;
-  color: #003300;
-  margin-bottom: 1rem;
-}
-
-.awards-intro {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 2.5rem;
-  line-height: 1.6;
-}
-
-.awards-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.award-card {
-  padding: 1.5rem;
-  border-top: 4px solid #f7b32b;
-  background: #f8f8f8;
-  border-radius: 8px;
-}
-
-.award-year {
-  font-weight: bold;
-  color: #f7b32b;
-  margin-bottom: 0.5rem;
-}
-
-.award-card h2 {
-  color: #003300;
-  margin: 0 0 0.7rem;
-}
-
-.award-card p {
-  line-height: 1.6;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .awards-grid {
-    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
