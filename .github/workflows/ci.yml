@@ -1,0 +1,19 @@
+name: Website CI
+
+on:
+push:
+pull_request:
+
+jobs:
+check:
+runs-on: ubuntu-latest
+steps:
+- name: Get the repository code
+uses: actions/checkout@v4
+
+
+  - name: Check HTML files
+    run: |
+      python -m pip install html5validator
+      html5validator --root .
+
